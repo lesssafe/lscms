@@ -294,7 +294,19 @@ class Index extends Base
             $this->success('修改失败','articlelist');
         }
 
-    }    
+    }
+
+    public function articledel()
+    {
+    	if(request()->isGet())
+        {
+            $id =input('get.id');
+            db('article')->where('id',$id)->delete();
+            $this-> success('删除成功','articlelist');               
+
+        }	
+
+    }  
 
 
 

@@ -34,6 +34,7 @@ class Index extends controller
         {
             $id =input('get.id');
             $data=db('cate')->where('cate_id',$id)->find();
+            //dump($data);die;
             if($data)
             {
                 //dump($data);die;
@@ -42,7 +43,7 @@ class Index extends controller
                 //dump($data);die;
                 //
                 
-                $articlelist=db('article')->where('id',$id)->select();
+                $articlelist=db('article')->where('cate_id',$id)->select();
                 $this->assign([
                     'articlelist'=>$articlelist,
                 ]);
