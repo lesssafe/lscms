@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:68:"D:\phpstudy_pro\WWW\public/../application/index\view\index\cate.html";i:1585828090;s:71:"D:\phpstudy_pro\WWW\public/../application/index\view\Common\header.html";i:1585495101;s:71:"D:\phpstudy_pro\WWW\public/../application/index\view\Common\footer.html";i:1585828314;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:68:"D:\phpstudy_pro\WWW\public/../application/index\view\index\cate.html";i:1586319990;s:71:"D:\phpstudy_pro\WWW\public/../application/index\view\Common\header.html";i:1585495101;s:71:"D:\phpstudy_pro\WWW\public/../application/index\view\Common\footer.html";i:1585828314;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -123,7 +123,7 @@
                 <img src="__index__/assets/i/f10.jpg" alt="" class="am-u-sm-12">
             </div>
             <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                <span><a href="" class="blog-color">article &nbsp;</a></span>
+                <span><a href="" class="blog-color"><?php echo $articlelist['cate_name']; ?> &nbsp;</a></span>
                 <span> <?php echo $articlelist['writer']; ?> &nbsp;</span>
                 <span>2015/10/9</span>
                 <h1><a href="article?id=<?php echo $articlelist['id']; ?>"><?php echo $articlelist['title']; ?></a></h1>

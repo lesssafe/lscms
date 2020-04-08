@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"D:\phpstudy_pro\WWW\public/../application/index\view\index\article.html";i:1585828621;s:71:"D:\phpstudy_pro\WWW\public/../application/index\view\Common\header.html";i:1585495101;s:72:"D:\phpstudy_pro\WWW\public/../application/index\view\Common\sidebar.html";i:1585829027;s:71:"D:\phpstudy_pro\WWW\public/../application/index\view\Common\footer.html";i:1585828314;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"D:\phpstudy_pro\WWW\public/../application/index\view\index\article.html";i:1586320572;s:71:"D:\phpstudy_pro\WWW\public/../application/index\view\Common\header.html";i:1585495101;s:72:"D:\phpstudy_pro\WWW\public/../application/index\view\Common\sidebar.html";i:1585829027;s:71:"D:\phpstudy_pro\WWW\public/../application/index\view\Common\footer.html";i:1585828314;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -62,7 +62,7 @@
         <div class="am-article-hd">
           <h1 class="am-article-title blog-text-center"><?php echo $article['title']; ?></h1>
           <p class="am-article-meta blog-text-center">
-              <span><a href="#" class="blog-color">article &nbsp;</a></span>-
+              <span><a href="#" class="blog-color"><?php echo $article['cate_name']; ?> &nbsp;</a></span>-
               <span><a href="#">@<?php echo $article['writer']; ?> &nbsp;</a></span>-
               <span><a href="#">2015/10/9</a></span>
           </p>

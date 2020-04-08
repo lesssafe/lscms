@@ -1,6 +1,7 @@
 <?php
 namespace app\index\controller;
 use think\Controller;
+use app\common\model\Index as IndexModel;
 class Index extends controller
 {
     public function index()
@@ -14,7 +15,8 @@ class Index extends controller
 
 
         //显示文章标题
-        $articlelist=db('article')->select();
+        $articlelist=IndexModel::query("SELECT * FROM cate,article where cate.cate_id=article.cate_id");
+        //$articlelist=db('article')->select();
         $this->assign([
             'articlelist'=>$articlelist,
         ]);
@@ -43,7 +45,8 @@ class Index extends controller
                 //dump($data);die;
                 //
                 
-                $articlelist=db('article')->where('cate_id',$id)->select();
+                //$articlelist=db('article')->where('cate_id',$id)->select();
+                $articlelist=IndexModel::query("SELECT * FROM cate,article where cate.cate_id=article.cate_id=$id");
                 $this->assign([
                     'articlelist'=>$articlelist,
                 ]);
@@ -78,6 +81,8 @@ class Index extends controller
             //
             $id =input('get.id');
             $article=db('article')->where('id',$id)->find();
+            $cate=db('cate')->where('cate_id',$article['cate_id'])->find();
+            $article['cate_name']=$cate['cate_name'];
             $this->assign([
                 'article'=>$article,
             ]);
